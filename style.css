@@ -1,0 +1,406 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    /*---------= Color =---------*/
+    --first-color-100: #f3f3f3;
+    --second-color-100: #FACC15;
+    --second-color-200: #d8871e;
+
+    --text-color-100: #f8f8f8;
+    --text-color-200: #ebebeb;
+    --text-color-300: #494b50;
+    --text-color-400: #252629;
+    
+    --body-color-500: #000000; 
+    --body-color-400: #E5E7EB;
+    --body-color-300: #FFFFFF;
+    --body-color-200: #4882b1;
+    --body-color-100: #252629;
+
+    --box-shadow: #7e1717;
+
+    --whatsapp: #37B64B;
+    --linkedin: #007FBA;
+    --github: #666666;
+    --email: #EB4235;
+
+    --divider: #363636ef;
+    
+
+    /*---------= Font-Size =---------*/
+    --body-font: 'Inter', sans-serif;
+    
+    --font-size-600: 2.35rem;
+    --font-size-500: 2.0rem;
+    --font-size-400: 1.875rem;
+    --font-size-300: 1.6rem;
+    --font-size-200: 1.4rem;
+    --font-size-100: 1.125rem;
+
+    /*========== Font-Weight ==========*/
+    --font-regular: 400;
+    --font-medium: 500;
+    --font-bold: 600;
+}
+
+/*---------= Responsive Font-Size =---------*/
+@media screen and (min-width: 1050px) {
+    :root {
+        --font-size-600: 3.2rem;
+        --font-size-500: 3rem;
+        --font-size-400: 2.5rem;
+        --font-size-300: 1.8rem;
+        --font-size-200: 1.4rem;
+        --font-size-100: 1.125rem;
+    }
+}
+
+/*---------= Base =---------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--body-font);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: var(--font-size-100);
+    color: var(--text-color-100);
+    background-color: var(--body-color-200);
+}
+
+input {
+    border: none;
+    outline: none;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    line-height: 1.625rem;
+}
+
+button {
+    outline: none;
+    border: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/*---------= CSS Classes =---------*/
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.section {
+    padding: 6rem 1rem;
+}
+
+.title {
+    font-family: 'Roboto', sans-serif;
+}
+
+.accent {
+    color: var(--second-color-100);
+}
+
+/*---------= Header & Nav =---------*/
+#header {
+    background-color: var(--body-color-100);
+}
+
+#header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 1rem;
+}
+
+.logo {
+    width: 100px;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.nav-list {
+    display: none;
+}
+
+.nav-link {
+    color: var(--text-color-100);
+    font-size: var(--font-size-100);
+    transition: all .2s;
+}
+
+.nav-link:hover {
+    color: var(--second-color-100);
+}
+
+.btn-login {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    background-color: transparent;
+    color: var(--text-color-100);
+    border: 1px solid var(--text-color-100);
+    border-radius: 0.375rem;
+    transition: all .2s;
+}
+
+.btn-login:hover {
+    cursor: pointer;
+    color: var(--second-color-100);
+    border: 1px solid var(--second-color-100);
+}
+
+.btn-login i {
+    padding-right: 1rem;
+}
+
+/*---------= Home =---------*/
+#hero {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+    padding: 2.5rem 1rem;
+    text-align: left;
+}
+
+.hero-text h1 {
+    font-size: var(--font-size-600);
+    color: var(--text-color-100);
+    margin-bottom: 1.5rem;
+}
+
+.hero-text p {
+    margin-bottom: 2rem;
+    color: var(--text-color-200);
+}
+
+.hero-text .btn-primary {
+    padding: 1rem 2rem;
+    font-size: var(--font-size-100);
+    font-weight: var(--font-bold);
+    border: 2px solid var(--first-color-100);
+    background-color: transparent;
+    color: var(--text-color-100);
+    transition: all .2s;
+    border-radius: 0.6rem;
+}
+
+.hero-text .btn-primary:hover {
+    cursor: pointer;
+    color: var(--second-color-100);
+    border: 2px solid var(--second-color-100);
+}
+
+.hero-image {
+    order: -1;
+}
+
+/*---------= Characters =---------*/
+#characters {
+    background-color: var(--body-color-300);
+    text-align: center;
+}
+
+#characters h2 {
+    color: var(--text-color-400);
+    font-size: var(--font-size-400);
+    font-weight: 800;
+    margin-bottom: 4rem;
+}
+
+.flex-cards {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.card {
+    flex: 0 1 200px;
+}
+
+.card img {
+    border: 5px solid var(--body-color-200);
+    border-radius: 15px;
+    margin-bottom: 0.6rem;
+    transition: all 0.4s;
+}
+
+.card img:hover {
+    transform: scale(1.05);
+}
+
+.card-info h3 {
+    color: var(--text-color-400);
+    text-transform: uppercase;
+    margin-bottom: 0.8rem;
+}
+
+.card-info p {
+    color: var(--text-color-300);
+    font-size: var(--font-size-100);
+}
+
+/*---------= Quote =---------*/
+#quote {
+    background-color: var(--body-color-400);
+    text-align: center;
+    display: flex;
+}
+
+#quote .container {
+    display: flex;
+    flex-flow: column nowrap;
+    flex: 0 1 700px;
+    gap: 1rem;
+}
+
+#quote p {
+    color: var(--text-color-400);
+    font-size: var(--font-size-400);
+    font-weight: 250;
+    line-height: 2.5;
+    font-style: italic;
+}
+
+#quote cite {
+    color: var(--text-color-400);
+    font-style: normal;
+    font-size: var(--font-size-300);
+    font-weight: 700;
+    text-align: right;
+}
+
+/*---------= CTA =---------*/
+#cta {
+    background: url(assets/invincible-wallpaper.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+
+#cta .container {
+    background-color: #4c9fe2;
+    border-radius: 10px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    gap: 1rem;
+}
+
+.cta-content h2 {
+    margin-bottom: 1rem;
+}
+
+.cta-form {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 100%;
+}
+
+.cta-form input {
+    padding: 0.8rem 1rem;
+    font-size: 0.9rem;
+}
+
+.cta-form input::placeholder {
+    color: #929292;
+}
+
+.cta-form .btn-primary {
+    padding: 0.8rem 1rem;
+    background-color: var(--second-color-100);
+    color: var(--text-color-300);
+    font-weight: var(--font-bold);
+    font-size: 0.9rem;
+    transition: all 0.3s;
+}
+
+.cta-form .btn-primary:hover {
+    cursor: pointer;
+    background-color: var(--second-color-200);
+    color: var(--text-color-100);
+}
+
+/*---------= Footer =---------*/
+.footer {
+    background-color: #1f2937;
+    text-align: center;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem;
+    padding: 2rem 1rem;
+}
+
+.footer p {
+    color: white;
+}
+
+.footer a {
+    color: white;
+    font-weight: var(--font-bold);
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/*---------= Media Query =---------*/
+@media screen and (min-width:600px) {
+    .nav-list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+}
+
+@media screen and (min-width:1100px) {
+    #hero {
+        flex-flow: row nowrap;
+        padding: 6rem 1rem;
+    }
+
+    .hero-text {
+        order: -1;
+    }
+
+    #quote p {
+        line-height: 1.2;
+    }
+
+    #cta .container {
+        flex-flow: row nowrap;
+    }
+
+    .cta-form {
+        width: 50%;
+    }
+
+}
