@@ -1,4 +1,4 @@
-# Landing Page: Invincible
+# Landing Page: Invencível
 
 Landing page temática baseada na série animada *Invincible*, desenvolvida como parte do currículo do **The Odin Project**. O foco do projeto foi a estruturação de layouts modernos utilizando CSS Flexbox.
 
